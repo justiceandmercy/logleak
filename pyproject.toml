@@ -1,0 +1,18 @@
+[project]
+name = "logleak"
+version = "0.1.0"
+description = "Find log/print statements that may leak secrets or PII."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[project.scripts]
+logleak = "logleak.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["logleak*"]
